@@ -1,3 +1,12 @@
+ Today I started my Machine Learning journey!
+Learned how to handle missing data in datasets using Pandas and sklearn’s SimpleImputer.
+Filling missing values with mean, median, or mode makes data clean and ready for modeling.
+ Exploring encoding categorical variables and detecting/removing outliers.
+Stay tuned for more ML learning!
+
+
+
+
 dataset.head(10) — View first 10 rows of the data to get a quick peek.
 
 dataset.shape — Check how many rows and columns are in the dataset.
