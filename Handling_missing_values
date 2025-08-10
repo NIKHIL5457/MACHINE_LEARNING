@@ -1,0 +1,31 @@
+dataset.head(10) — View first 10 rows of the data to get a quick peek.
+
+dataset.shape — Check how many rows and columns are in the dataset.
+
+dataset.isnull().head(10) — See which values are missing in the first 10 rows.
+
+dataset.isnull().sum() — Count total missing values per column.
+
+dataset.shape[0] — Get total number of rows.
+
+(dataset.isnull().sum()/dataset.shape[0])*100 — Calculate % of missing data per column.
+
+print(dataset.isnull().sum().sum()) — Total number of missing values in the whole dataset.
+
+print(((dataset.isnull().sum().sum())/(dataset.shape[0]*dataset.shape[1]))*100) — % of total missing values in the dataset.
+
+print((dataset.shape[0]*dataset.shape[1])-(dataset.isnull().sum().sum())) — Number of non-missing values.
+
+print(dataset.notnull().sum().sum()) — Confirm total non-missing values count.
+
+sns.heatmap(dataset.isnull()) — Visualize missing data with a heatmap.
+
+dataset.drop(columns=["Bonus"], inplace=True) — Remove the “Bonus” column from the dataset.
+
+dataset["Rating"].fillna(dataset["Rating"].mode()[0], inplace=True) — Fill missing "Rating" values with the most frequent value.
+
+Loop filling object columns with mode — Replace missing categorical values with their most common category.
+
+SimpleImputer(strategy="mean") + fit_transform — Fill missing numeric values with the mean value.
+
+Create new DataFrame from imputed array — Store cleaned numeric data in a new DataFrame for further use.
